@@ -1,6 +1,6 @@
 import requests
 
-from config import Config
+from configs import Config
 
 
 class AIServiceError(Exception):
@@ -12,7 +12,7 @@ class AIService:
 
     def __init__(self):
         self.api_key = Config.GROQ_API_KEY
-        self.model = "llama-3.1-8b-instant"
+        self.model = "openai/gpt-oss-20b"
         self.base_url = "https://api.groq.com/openai/v1/chat/completions"
         self.business_context = Config.BUSINESS_CONTEXT
 
