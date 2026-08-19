@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 
-from config import config_by_name
+from configs import config_by_name
 from app.database import close_db, init_db
 from app.routes import api_bp, pages_bp
 
